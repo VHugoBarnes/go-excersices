@@ -4,32 +4,24 @@ import "fmt"
 
 func main() {
 
-	//? Loops
+	//? Switch
 
-	//? Conditional for
-	for i := 0; i < 10; i++ {
-		fmt.Println("i:", i)
+	switch modulo := 4 % 2; modulo {
+	case 0:
+		fmt.Println("Even")
+	default:
+		fmt.Println("Odd")
 	}
 
-	fmt.Println()
-
-	//? For while
-	counter := 0
-	for counter < 10 {
-		fmt.Println(counter)
-		counter++
-	}
-
-	fmt.Println()
-
-	//? For forever
-	counterForever := 0
-	for {
-		fmt.Println(counterForever)
-		counterForever++
-		if counterForever == 5 {
-			break
-		}
+	//? Without condition
+	value := 200
+	switch {
+	case value > 100:
+		fmt.Println("Is gt than 100")
+	case value < 0:
+		fmt.Println("Is less than 0")
+	default:
+		fmt.Println("No condition")
 	}
 
 }
