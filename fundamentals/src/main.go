@@ -4,38 +4,35 @@ import "fmt"
 
 func main() {
 
-	// Constant
-	const name string = "keko"
+	x := 10
+	y := 20
 
-	// Variables
-	// Integers
-	// Not declared yet
-	base := 12
-	// Create and assign
-	var height float32 = 14
-	// Create
-	var weight float32
+	// Addition
+	z := x + y
 
-	// Zero Value
-	var numero int
-	var cadena string
-	var booleano bool
-	var flotante32 float32
-	var flotante64 float64
+	// Substraction
+	zx := x - y
 
-	// Excersice - square area
-	const baseCuadrado = 10
-	areaCuadrado := baseCuadrado * baseCuadrado
+	// Multiplication
+	zi := x * y
 
-	fmt.Println(name)
-	fmt.Println("base: ", base)
-	fmt.Println("height: ", height)
-	fmt.Println("weight: ", weight)
-	fmt.Println("numero: ", numero)
-	fmt.Println("cadena: ", cadena)
-	fmt.Println("booleano: ", booleano)
-	fmt.Println("flotante32: ", flotante32)
-	fmt.Println("flotante64: ", flotante64)
-	fmt.Println("areaCuadrado: ", areaCuadrado)
+	// Division
+	zw := x / y
+
+	// Module
+	zq := x % y
+
+	// Incremental
+	x++
+
+	// Decremental
+	x--
+
+	fmt.Println("Addition: ", z)
+	fmt.Println("Substraction: ", zx)
+	fmt.Println("Multiplication: ", zi)
+	fmt.Println("Division: ", zw)
+	fmt.Println("Module: ", zq)
+	fmt.Println("x: ", x)
 
 }
