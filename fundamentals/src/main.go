@@ -2,37 +2,34 @@ package main
 
 import "fmt"
 
-func normalFunction(message string) {
-	fmt.Println(message)
-}
-
-func tripleArgs(a int, b int, c string) {
-	fmt.Println(a, b, c)
-}
-
-func returnValue(a int) int {
-	return a * a
-}
-
-func doubleReturn(a int) (c, d int) {
-	return a, a * 2
-}
-
 func main() {
 
-	//? Functions
-	normalFunction("Hello Keko")
+	//? Loops
 
-	tripleArgs(149, 15, "Malia")
+	//? Conditional for
+	for i := 0; i < 10; i++ {
+		fmt.Println("i:", i)
+	}
 
-	var x int = returnValue(2)
-	fmt.Println(x)
+	fmt.Println()
 
-	var value1, value2 int = doubleReturn(2)
-	fmt.Println(value1, value2)
+	//? For while
+	counter := 0
+	for counter < 10 {
+		fmt.Println(counter)
+		counter++
+	}
 
-	// If we just want one value
-	var val1, _ int = doubleReturn(3)
-	fmt.Println(val1)
+	fmt.Println()
+
+	//? For forever
+	counterForever := 0
+	for {
+		fmt.Println(counterForever)
+		counterForever++
+		if counterForever == 5 {
+			break
+		}
+	}
 
 }
