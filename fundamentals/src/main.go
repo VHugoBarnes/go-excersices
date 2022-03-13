@@ -4,35 +4,60 @@ import "fmt"
 
 func main() {
 
-	x := 10
-	y := 20
+	// Variable types
 
-	// Addition
-	z := x + y
+	// Integers
+	var in int = 19419491
+	fmt.Println("int 64/32 bits", in)
 
-	// Substraction
-	zx := x - y
+	var in8 int8 = -128
+	in8 = 127
+	fmt.Println("int 8 bits", in8)
 
-	// Multiplication
-	zi := x * y
+	var in16 int16 = 13033
+	fmt.Println("int 16 bits", in16)
 
-	// Division
-	zw := x / y
+	var in32 int32 = 13033
+	fmt.Println("int 32 bits", in32)
 
-	// Module
-	zq := x % y
+	var in64 int16 = 13033
+	fmt.Println("int 64 bits", in64)
 
-	// Incremental
-	x++
+	// Positive integers
+	var pin uint = 1
+	fmt.Println("possitive int 64/32 bits", pin)
 
-	// Decremental
-	x--
+	var pin8 uint8 = 1
+	fmt.Println("possitive int 8 bits", pin8)
 
-	fmt.Println("Addition: ", z)
-	fmt.Println("Substraction: ", zx)
-	fmt.Println("Multiplication: ", zi)
-	fmt.Println("Division: ", zw)
-	fmt.Println("Module: ", zq)
-	fmt.Println("x: ", x)
+	var pin16 uint16 = 1
+	fmt.Println("possitive int 16 bits", pin16)
 
+	var pin32 uint32 = 1
+	fmt.Println("possitive int 32 bits", pin32)
+
+	var pin64 uint64 = 1
+	fmt.Println("possitive int 64 bits", pin64)
+
+	// Decimals
+	var flotante32 float32 = 1.41441
+	fmt.Println("float 32 bits", flotante32)
+
+	var flotante64 float64 = 1.41441
+	fmt.Println("float 64 bits", flotante64)
+
+	// String
+	var str string = ""
+	fmt.Println("str", str)
+
+	// Booleans
+	var boolean bool = false
+	fmt.Println("Boolean", boolean)
+
+	// Complex numbers
+	var com64 complex64 = 14
+	fmt.Println("Complex 64", com64)
+
+	var com128 complex128 = 10 + 8i
+	fmt.Println("Complex 128", com128)
 }
