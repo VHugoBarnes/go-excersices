@@ -4,24 +4,37 @@ import "fmt"
 
 func main() {
 
-	//? Switch
+	//? Defer, break & continue
 
-	switch modulo := 4 % 2; modulo {
-	case 0:
-		fmt.Println("Even")
-	default:
-		fmt.Println("Odd")
+	// Defer
+	// With defer the line will run last
+	defer fmt.Println("Hello")
+	fmt.Println("World")
+
+	// Continue
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+
+		if i == 2 {
+			fmt.Println("Is 2")
+			continue
+		}
 	}
 
-	//? Without condition
-	value := 200
-	switch {
-	case value > 100:
-		fmt.Println("Is gt than 100")
-	case value < 0:
-		fmt.Println("Is less than 0")
-	default:
-		fmt.Println("No condition")
+	for i := 0; i < 10; i++ {
+		//continue
+		if i == 2 {
+			fmt.Println("llegue a 2")
+			continue
+		}
+		//break
+		if i == 8 {
+			fmt.Println("llegue a 8")
+			break
+		}
+		fmt.Println(i)
 	}
+
+	// Break
 
 }
