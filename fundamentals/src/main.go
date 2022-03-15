@@ -1,17 +1,41 @@
 package main
 
-import (
-	"fmt"
-	pk "fundamentals/src/mypackage"
-)
+import "fmt"
+
+type pc struct {
+	ram       int
+	disk_size int
+	brand     string
+}
+
+func (myPC pc) ping() {
+	fmt.Println(myPC.brand, "pong")
+}
+
+func (myPC *pc) duplicateRAM() {
+	myPC.ram = myPC.ram * 2
+}
 
 func main() {
 
-	var myCar pk.CarPublic
-	myCar.Brand = "Tesla"
-	myCar.Year = 2002
+	a := 50
+	b := &a
 
-	fmt.Println(myCar)
+	*b = 100
 
-	pk.PrintMessage()
+	fmt.Println(b)
+	fmt.Println(a)
+
+	myPC := pc{ram: 16, disk_size: 1000, brand: "HP"}
+	fmt.Println(myPC)
+
+	myPC.ping()
+	fmt.Println(myPC)
+
+	myPC.duplicateRAM()
+	fmt.Println(myPC)
+
+	myPC.duplicateRAM()
+	fmt.Println(myPC)
+
 }
