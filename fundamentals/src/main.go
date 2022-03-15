@@ -2,13 +2,16 @@ package main
 
 import (
 	"fmt"
-	"fundamentals/src/mypackage"
+	pk "fundamentals/src/mypackage"
 )
 
 func main() {
 
-	var myCar mypackage.CarPublic = mypackage.CarPublic{Brand: "Tesla", Year: 2021}
+	var myCar pk.CarPublic
+	myCar.Brand = "Tesla"
+	myCar.Year = 2002
 
 	fmt.Println(myCar)
 
+	pk.PrintMessage()
 }
