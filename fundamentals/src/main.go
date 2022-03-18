@@ -1,26 +1,21 @@
 package main
 
-import (
-	"fmt"
-	"sync"
-)
+import "fmt"
 
-func say(text string, wg *sync.WaitGroup) {
-	defer wg.Done()
+func say(text string, c chan<- string) {
 
-	fmt.Println(text)
+	c <- text
+
 }
 
 func main() {
 
-	var wg sync.WaitGroup
+	c := make(chan string, 1)
 
 	fmt.Println("Hello")
 
-	wg.Add(1)
+	go say("Bye", c)
 
-	go say("World", &wg)
-
-	wg.Wait()
+	fmt.Print(<-c)
 
 }
